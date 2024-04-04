@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 
 exports.getAllBlogs = async (req, res) => {
   try {
-    const blogs = await blogModel.find({});
+    const blogs = await blogModel.find({}).populate("user");
     if (!blogs) {
       return res.status(200).send({
         success: false,
@@ -135,10 +135,10 @@ exports.updateBlog = async (req, res) => {
 exports.deleteBlog = async (req, res) => {
   try {
     const blog = await blogModel
-      .findOneAndDelete(req.params.id)
+      .findByIdAndDelete(req.params.id)
       .populate("user");
-    await blog.user.blogs.pull(blog);
-    await blog.user.save();
+    await blog?.user?.blogs.pull(blog);
+    await blog?.user?.save();
     return res.status(200).send({
       success: true,
       message: "Blog Deleted successfully",

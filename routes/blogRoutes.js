@@ -19,15 +19,15 @@ router.get("/all-blog", getAllBlogs);
 router.get("/get-blog/:id", getBlogById);
 
 // POST
-router.post("/create-blog", createBlog);
+router.post("/createBlog", createBlog);
 
 // PUT
-router.put("/update-blog/:id", updateBlog);
+router.put("/updateBlog/:id", updateBlog);
 
 // Delete
-router.delete("/delete-blog/:id", deleteBlog);
+router.delete("/deleteBlog/:id", deleteBlog);
 
 // GET
-router.get("/user-blog/:id", userBlog);
+router.get("/userBlog/:id", userBlog);
 
 module.exports = router;
