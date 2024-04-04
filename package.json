@@ -1,0 +1,22 @@
+{
+  "name": "blognow",
+  "version": "1.0.0",
+  "description": "Mern Blog app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Bipasha Dey",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0"
+  }
+}
