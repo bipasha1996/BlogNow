@@ -42,5 +42,3 @@ const UserBlogs = () => {
 };
 
 export default UserBlogs;
-
-//In0CWvd4oNG6P3lZ
